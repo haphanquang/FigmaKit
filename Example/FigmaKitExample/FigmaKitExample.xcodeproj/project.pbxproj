@@ -1,0 +1,676 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB522C7E2634577B006C3C05 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB522C6C2634577B006C3C05 /* Roboto-Medium.ttf */; };
+		EB522C7F2634577B006C3C05 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB522C6D2634577B006C3C05 /* Roboto-Light.ttf */; };
+		EB522C822634577B006C3C05 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB522C702634577B006C3C05 /* Roboto-Regular.ttf */; };
+		EB522C832634577B006C3C05 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB522C712634577B006C3C05 /* Roboto-MediumItalic.ttf */; };
+		EB522C872634577B006C3C05 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB522C752634577B006C3C05 /* Roboto-ThinItalic.ttf */; };
+		EB522C892634577B006C3C05 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB522C772634577B006C3C05 /* Roboto-BoldItalic.ttf */; };
+		EB522C8A2634577B006C3C05 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB522C782634577B006C3C05 /* Roboto-LightItalic.ttf */; };
+		EB522C8B2634577B006C3C05 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB522C792634577B006C3C05 /* Roboto-Italic.ttf */; };
+		EB522C8C2634577B006C3C05 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB522C7A2634577B006C3C05 /* Roboto-BlackItalic.ttf */; };
+		EB522C8D2634577B006C3C05 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB522C7B2634577B006C3C05 /* Roboto-Bold.ttf */; };
+		EB522C8E2634577B006C3C05 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB522C7C2634577B006C3C05 /* Roboto-Thin.ttf */; };
+		EB522C8F2634577B006C3C05 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB522C7D2634577B006C3C05 /* Roboto-Black.ttf */; };
+		EBAC06652633E9E0004455BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAC06642633E9E0004455BC /* AppDelegate.swift */; };
+		EBAC06672633E9E0004455BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAC06662633E9E0004455BC /* SceneDelegate.swift */; };
+		EBAC06692633E9E0004455BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAC06682633E9E0004455BC /* ViewController.swift */; };
+		EBAC066C2633E9E0004455BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBAC066A2633E9E0004455BC /* Main.storyboard */; };
+		EBAC066E2633E9E1004455BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBAC066D2633E9E1004455BC /* Assets.xcassets */; };
+		EBAC06712633E9E1004455BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBAC066F2633E9E1004455BC /* LaunchScreen.storyboard */; };
+		EBAC067C2633E9E1004455BC /* FigmaKitExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAC067B2633E9E1004455BC /* FigmaKitExampleTests.swift */; };
+		EBAC06872633E9E1004455BC /* FigmaKitExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAC06862633E9E1004455BC /* FigmaKitExampleUITests.swift */; };
+		EBAC069D2633EBEF004455BC /* FigmaKit in Frameworks */ = {isa = PBXBuildFile; productRef = EBAC069C2633EBEF004455BC /* FigmaKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBAC06782633E9E1004455BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBAC06592633E9E0004455BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBAC06602633E9E0004455BC;
+			remoteInfo = FigmaKitExample;
+		};
+		EBAC06832633E9E1004455BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBAC06592633E9E0004455BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBAC06602633E9E0004455BC;
+			remoteInfo = FigmaKitExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EB522C6C2634577B006C3C05 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		EB522C6D2634577B006C3C05 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		EB522C702634577B006C3C05 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		EB522C712634577B006C3C05 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		EB522C752634577B006C3C05 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		EB522C772634577B006C3C05 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		EB522C782634577B006C3C05 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		EB522C792634577B006C3C05 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		EB522C7A2634577B006C3C05 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		EB522C7B2634577B006C3C05 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		EB522C7C2634577B006C3C05 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		EB522C7D2634577B006C3C05 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		EBAC06612633E9E0004455BC /* FigmaKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FigmaKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBAC06642633E9E0004455BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EBAC06662633E9E0004455BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EBAC06682633E9E0004455BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EBAC066B2633E9E0004455BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EBAC066D2633E9E1004455BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EBAC06702633E9E1004455BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EBAC06722633E9E1004455BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBAC06772633E9E1004455BC /* FigmaKitExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FigmaKitExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBAC067B2633E9E1004455BC /* FigmaKitExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigmaKitExampleTests.swift; sourceTree = "<group>"; };
+		EBAC067D2633E9E1004455BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBAC06822633E9E1004455BC /* FigmaKitExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FigmaKitExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBAC06862633E9E1004455BC /* FigmaKitExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigmaKitExampleUITests.swift; sourceTree = "<group>"; };
+		EBAC06882633E9E1004455BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBAC06972633EA43004455BC /* FigmaKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FigmaKit; path = ../..; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBAC065E2633E9E0004455BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBAC069D2633EBEF004455BC /* FigmaKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBAC06742633E9E1004455BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBAC067F2633E9E1004455BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB522C6B2634577B006C3C05 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EB522C702634577B006C3C05 /* Roboto-Regular.ttf */,
+				EB522C7C2634577B006C3C05 /* Roboto-Thin.ttf */,
+				EB522C6D2634577B006C3C05 /* Roboto-Light.ttf */,
+				EB522C6C2634577B006C3C05 /* Roboto-Medium.ttf */,
+				EB522C7B2634577B006C3C05 /* Roboto-Bold.ttf */,
+				EB522C7D2634577B006C3C05 /* Roboto-Black.ttf */,
+				EB522C792634577B006C3C05 /* Roboto-Italic.ttf */,
+				EB522C752634577B006C3C05 /* Roboto-ThinItalic.ttf */,
+				EB522C782634577B006C3C05 /* Roboto-LightItalic.ttf */,
+				EB522C712634577B006C3C05 /* Roboto-MediumItalic.ttf */,
+				EB522C772634577B006C3C05 /* Roboto-BoldItalic.ttf */,
+				EB522C7A2634577B006C3C05 /* Roboto-BlackItalic.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EBAC06582633E9E0004455BC = {
+			isa = PBXGroup;
+			children = (
+				EBAC06972633EA43004455BC /* FigmaKit */,
+				EBAC06632633E9E0004455BC /* FigmaKitExample */,
+				EBAC067A2633E9E1004455BC /* FigmaKitExampleTests */,
+				EBAC06852633E9E1004455BC /* FigmaKitExampleUITests */,
+				EBAC06622633E9E0004455BC /* Products */,
+				EBAC069B2633EBEF004455BC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EBAC06622633E9E0004455BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBAC06612633E9E0004455BC /* FigmaKitExample.app */,
+				EBAC06772633E9E1004455BC /* FigmaKitExampleTests.xctest */,
+				EBAC06822633E9E1004455BC /* FigmaKitExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBAC06632633E9E0004455BC /* FigmaKitExample */ = {
+			isa = PBXGroup;
+			children = (
+				EB522C6B2634577B006C3C05 /* Resources */,
+				EBAC06642633E9E0004455BC /* AppDelegate.swift */,
+				EBAC06662633E9E0004455BC /* SceneDelegate.swift */,
+				EBAC06682633E9E0004455BC /* ViewController.swift */,
+				EBAC066A2633E9E0004455BC /* Main.storyboard */,
+				EBAC066D2633E9E1004455BC /* Assets.xcassets */,
+				EBAC066F2633E9E1004455BC /* LaunchScreen.storyboard */,
+				EBAC06722633E9E1004455BC /* Info.plist */,
+			);
+			path = FigmaKitExample;
+			sourceTree = "<group>";
+		};
+		EBAC067A2633E9E1004455BC /* FigmaKitExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBAC067B2633E9E1004455BC /* FigmaKitExampleTests.swift */,
+				EBAC067D2633E9E1004455BC /* Info.plist */,
+			);
+			path = FigmaKitExampleTests;
+			sourceTree = "<group>";
+		};
+		EBAC06852633E9E1004455BC /* FigmaKitExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EBAC06862633E9E1004455BC /* FigmaKitExampleUITests.swift */,
+				EBAC06882633E9E1004455BC /* Info.plist */,
+			);
+			path = FigmaKitExampleUITests;
+			sourceTree = "<group>";
+		};
+		EBAC069B2633EBEF004455BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBAC06602633E9E0004455BC /* FigmaKitExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBAC068B2633E9E1004455BC /* Build configuration list for PBXNativeTarget "FigmaKitExample" */;
+			buildPhases = (
+				EBAC065D2633E9E0004455BC /* Sources */,
+				EBAC065E2633E9E0004455BC /* Frameworks */,
+				EBAC065F2633E9E0004455BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FigmaKitExample;
+			packageProductDependencies = (
+				EBAC069C2633EBEF004455BC /* FigmaKit */,
+			);
+			productName = FigmaKitExample;
+			productReference = EBAC06612633E9E0004455BC /* FigmaKitExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBAC06762633E9E1004455BC /* FigmaKitExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBAC068E2633E9E1004455BC /* Build configuration list for PBXNativeTarget "FigmaKitExampleTests" */;
+			buildPhases = (
+				EBAC06732633E9E1004455BC /* Sources */,
+				EBAC06742633E9E1004455BC /* Frameworks */,
+				EBAC06752633E9E1004455BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBAC06792633E9E1004455BC /* PBXTargetDependency */,
+			);
+			name = FigmaKitExampleTests;
+			productName = FigmaKitExampleTests;
+			productReference = EBAC06772633E9E1004455BC /* FigmaKitExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EBAC06812633E9E1004455BC /* FigmaKitExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBAC06912633E9E1004455BC /* Build configuration list for PBXNativeTarget "FigmaKitExampleUITests" */;
+			buildPhases = (
+				EBAC067E2633E9E1004455BC /* Sources */,
+				EBAC067F2633E9E1004455BC /* Frameworks */,
+				EBAC06802633E9E1004455BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBAC06842633E9E1004455BC /* PBXTargetDependency */,
+			);
+			name = FigmaKitExampleUITests;
+			productName = FigmaKitExampleUITests;
+			productReference = EBAC06822633E9E1004455BC /* FigmaKitExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBAC06592633E9E0004455BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					EBAC06602633E9E0004455BC = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					EBAC06762633E9E1004455BC = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = EBAC06602633E9E0004455BC;
+					};
+					EBAC06812633E9E1004455BC = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = EBAC06602633E9E0004455BC;
+					};
+				};
+			};
+			buildConfigurationList = EBAC065C2633E9E0004455BC /* Build configuration list for PBXProject "FigmaKitExample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBAC06582633E9E0004455BC;
+			productRefGroup = EBAC06622633E9E0004455BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBAC06602633E9E0004455BC /* FigmaKitExample */,
+				EBAC06762633E9E1004455BC /* FigmaKitExampleTests */,
+				EBAC06812633E9E1004455BC /* FigmaKitExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBAC065F2633E9E0004455BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB522C8D2634577B006C3C05 /* Roboto-Bold.ttf in Resources */,
+				EB522C7E2634577B006C3C05 /* Roboto-Medium.ttf in Resources */,
+				EB522C8A2634577B006C3C05 /* Roboto-LightItalic.ttf in Resources */,
+				EB522C892634577B006C3C05 /* Roboto-BoldItalic.ttf in Resources */,
+				EB522C822634577B006C3C05 /* Roboto-Regular.ttf in Resources */,
+				EB522C8B2634577B006C3C05 /* Roboto-Italic.ttf in Resources */,
+				EB522C8E2634577B006C3C05 /* Roboto-Thin.ttf in Resources */,
+				EBAC06712633E9E1004455BC /* LaunchScreen.storyboard in Resources */,
+				EB522C7F2634577B006C3C05 /* Roboto-Light.ttf in Resources */,
+				EB522C8F2634577B006C3C05 /* Roboto-Black.ttf in Resources */,
+				EBAC066E2633E9E1004455BC /* Assets.xcassets in Resources */,
+				EB522C8C2634577B006C3C05 /* Roboto-BlackItalic.ttf in Resources */,
+				EB522C832634577B006C3C05 /* Roboto-MediumItalic.ttf in Resources */,
+				EBAC066C2633E9E0004455BC /* Main.storyboard in Resources */,
+				EB522C872634577B006C3C05 /* Roboto-ThinItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBAC06752633E9E1004455BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBAC06802633E9E1004455BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBAC065D2633E9E0004455BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBAC06692633E9E0004455BC /* ViewController.swift in Sources */,
+				EBAC06652633E9E0004455BC /* AppDelegate.swift in Sources */,
+				EBAC06672633E9E0004455BC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBAC06732633E9E1004455BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBAC067C2633E9E1004455BC /* FigmaKitExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBAC067E2633E9E1004455BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBAC06872633E9E1004455BC /* FigmaKitExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBAC06792633E9E1004455BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBAC06602633E9E0004455BC /* FigmaKitExample */;
+			targetProxy = EBAC06782633E9E1004455BC /* PBXContainerItemProxy */;
+		};
+		EBAC06842633E9E1004455BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBAC06602633E9E0004455BC /* FigmaKitExample */;
+			targetProxy = EBAC06832633E9E1004455BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EBAC066A2633E9E0004455BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBAC066B2633E9E0004455BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EBAC066F2633E9E1004455BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBAC06702633E9E1004455BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EBAC06892633E9E1004455BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EBAC068A2633E9E1004455BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBAC068C2633E9E1004455BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V72W5MQP85;
+				INFOPLIST_FILE = FigmaKitExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soyo.FigmaKitExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EBAC068D2633E9E1004455BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V72W5MQP85;
+				INFOPLIST_FILE = FigmaKitExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soyo.FigmaKitExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EBAC068F2633E9E1004455BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V72W5MQP85;
+				INFOPLIST_FILE = FigmaKitExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soyo.FigmaKitExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FigmaKitExample.app/FigmaKitExample";
+			};
+			name = Debug;
+		};
+		EBAC06902633E9E1004455BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V72W5MQP85;
+				INFOPLIST_FILE = FigmaKitExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soyo.FigmaKitExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FigmaKitExample.app/FigmaKitExample";
+			};
+			name = Release;
+		};
+		EBAC06922633E9E1004455BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V72W5MQP85;
+				INFOPLIST_FILE = FigmaKitExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soyo.FigmaKitExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FigmaKitExample;
+			};
+			name = Debug;
+		};
+		EBAC06932633E9E1004455BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V72W5MQP85;
+				INFOPLIST_FILE = FigmaKitExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soyo.FigmaKitExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FigmaKitExample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBAC065C2633E9E0004455BC /* Build configuration list for PBXProject "FigmaKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBAC06892633E9E1004455BC /* Debug */,
+				EBAC068A2633E9E1004455BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBAC068B2633E9E1004455BC /* Build configuration list for PBXNativeTarget "FigmaKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBAC068C2633E9E1004455BC /* Debug */,
+				EBAC068D2633E9E1004455BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBAC068E2633E9E1004455BC /* Build configuration list for PBXNativeTarget "FigmaKitExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBAC068F2633E9E1004455BC /* Debug */,
+				EBAC06902633E9E1004455BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBAC06912633E9E1004455BC /* Build configuration list for PBXNativeTarget "FigmaKitExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBAC06922633E9E1004455BC /* Debug */,
+				EBAC06932633E9E1004455BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EBAC069C2633EBEF004455BC /* FigmaKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FigmaKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = EBAC06592633E9E0004455BC /* Project object */;
+}
