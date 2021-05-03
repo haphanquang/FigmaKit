@@ -34,11 +34,10 @@ view
 ```
 
 ### Background
-*In progress*
-
-<img src="./Resources/fills.png" width="200" >
 
 from gradients
+<img src="./Resources/fills.png" width="200" >
+
 ```swift
 view
     .fill(.linear(colors: [(0xEBEBEB, 0), (0x9EE505, 1)], alpha: 90))
