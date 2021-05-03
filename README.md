@@ -33,15 +33,22 @@ view
     .corner(.mixed(20, 50, 0, 50))
 ```
 
-### Gradient or solid - *In progress*
+### Background
+*In progress*
 
 <img src="./Resources/fills.png" width="200" >
 
+from gradients
 ```swift
 view
     .fill(.linear(colors: [(0xEBEBEB, 0), (0x9EE505, 1)], alpha: 90))
 ```
 
+to solid color
+```swift
+view
+    .fill(.solid(0xEBEBEB))
+```
 
 ### Stroke inside, outside or center
 
