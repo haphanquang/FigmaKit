@@ -35,7 +35,7 @@ public extension UIView {
             return figmaView as! FigmaView
         }
         
-        let figmaView = FigmaView()
+        let figmaView = FigmaView(frame: self.bounds)
         figmaView.translatesAutoresizingMaskIntoConstraints = false
         self.insertSubview(figmaView, at: 0)
         
@@ -91,9 +91,8 @@ private class FigmaView: UIView {
     private var corners: CornerRadius?
     private var shadow: Shadow?
 
-    
-    init() {
-        super.init(frame: .zero)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         shadowLayer.fillColor = UIColor.clear.cgColor
         backgroundMaskLayer.fillColor = UIColor.white.cgColor
         strokeLayer.fillColor = UIColor.clear.cgColor
@@ -171,7 +170,7 @@ extension FigmaView {
     
     private func getAdjustedFrame() -> CGRect {
         var rect = self.bounds
-        if let stroke = self.stroke {
+        if let stroke = self.stroke, rect != .zero {
             rect = rect.insetBy(dx: stroke.adjustedWidth, dy: stroke.adjustedWidth)
         }
         return rect
@@ -222,7 +221,6 @@ extension UIBezierPath {
     convenience init(shouldRoundRect rect: CGRect, topLeftRadius: CGSize = .zero, topRightRadius: CGSize = .zero, bottomLeftRadius: CGSize = .zero, bottomRightRadius: CGSize = .zero){
 
         self.init()
-
         let path = CGMutablePath()
 
         let topLeft = rect.origin

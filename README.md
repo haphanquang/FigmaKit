@@ -5,7 +5,7 @@ A library to make ui code synchronize with designer's works
 ## Features
 
 - [x] Colors, corners, shadow, strokes, fill
-- [x] Rich Text formatting
+- [x] Label attributed
 - [ ] SwiftUI
 
 ### Colors and Fill
@@ -112,10 +112,17 @@ sampleLabel
     .unregister()
 ```
 
+## Requirement
+
+iOS 11.0+
+Swift 4.0+
 
 ## Installation
 
-Swift Package - *in progress*
+### Swift Package manager
+
+- Click `File` → `Swift Packages` → `Add Package Dependency`
+- Enter `https://github.com/haphanquang/FigmaKit`
 
 ## Support
 
