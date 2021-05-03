@@ -36,6 +36,7 @@ view
 ### Background
 
 from gradients
+
 <img src="./Resources/fills.png" width="200" >
 
 ```swift
@@ -49,7 +50,7 @@ view
     .fill(.solid(0xEBEBEB))
 ```
 
-### Stroke inside, outside or center
+### Strokes
 
 <img src="./Resources/strokes.png" width="200" >
 
@@ -59,7 +60,7 @@ view
 ```
 
 
-### And shadows
+### Shadows
 
 <img src="./Resources/shadows.png" width="200" >
 
@@ -68,8 +69,7 @@ topView
     .shadow(.drop(0x000000, x: 0, y: 4, b: 4, s: 0, alpha: 25))
 ```
 
-
-Final result 
+Tada! Real-life result with **pixel perfection**
 
 <img src="./Resources/results.png" width="200" >
 
