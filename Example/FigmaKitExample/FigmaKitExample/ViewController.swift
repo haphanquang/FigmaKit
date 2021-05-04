@@ -117,7 +117,7 @@ class ViewController: UIViewController {
             // Don't forget to clean for next use
             .cleanUp()
         
-        let tp = Typography.custom(
+        let typo = Typography.custom(
             "Roboto",
             weight: 500,
             style: .italic,
@@ -126,7 +126,7 @@ class ViewController: UIViewController {
             letter: 2)
         
         codeLabel
-            .typography(tp)
+            .typography(typo)
             .alignment(.center)
     }
 

@@ -35,16 +35,13 @@ view
 
 #### Background
 
-from gradients
-
 <img src="./Resources/fills.png" width="200" >
 
 ```swift
 view
     .fill(.linear(colors: [(0xEBEBEB, 0), (0x9EE505, 1)], alpha: 90))
 ```
-
-to solid color
+from gradients to solid color
 ```swift
 view
     .fill(.solid(0xEBEBEB))
@@ -77,14 +74,13 @@ Tada! Real-life result with **pixel perfection**
 ### Styles
 
 #### Typography
-
 Never missmatch designing text styling
 
 <img src="./Resources/typography1.png" width="200" >
 
 as 
-```
-let tp = Typography.custom(
+```swift
+let typo = Typography.custom(
     "Roboto",
     weight: 500,
     style: .italic,
@@ -93,12 +89,11 @@ let tp = Typography.custom(
     letter: 2)
 
 codeLabel
-    .typography(tp)
+    .typography(typo)
     .alignment(.center)
 ```
 
 #### Rich Text
-
 Or with multiple and complex styles in one place
 
 <img src="./Resources/typos.png" width="300" >
