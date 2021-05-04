@@ -52,6 +52,7 @@ public protocol FillType {
 public protocol TypographyType {
     var font: UIFont { get }
     var lineHeight: CGFloat { get }
+    var letterSpacing: CGFloat { get }
 }
 public enum Shadow: ShadowType {
     case drop(ColorType?, x: CGFloat, y: CGFloat, b: CGFloat, s: CGFloat, alpha: Float)
@@ -72,6 +73,6 @@ public enum Fill: FillType {
     case linear(colors: [(ColorType?, CGFloat?)], start: CGPoint? = nil, end: CGPoint? = nil, alpha: CGFloat = 100)
 }
 public enum Typography: TypographyType {
-    case custom(name: String, weight: Int, size: CGFloat, lineHeight: CGFloat = 0)
-    case font(_ font: UIFont, lineHeight: CGFloat = 0)
+    case custom(String, weight: Int, style: FontStyle = .normal, size: CGFloat, lineHeight: CGFloat = 0, letter: CGFloat = 0.0)
+    case font(UIFont, lineHeight: CGFloat = 0, letter: CGFloat = 0.0)
 }

@@ -147,34 +147,48 @@ extension Fill {
 }
 
 extension Typography {
+    public enum FontStyle: String {
+        case normal = ""
+        case italic = "Italic"
+    }
+    
     public var font: UIFont {
         switch self {
-        case let .custom(name, weight, size, _):
-            if !weight.fontWeight.isEmpty {
-                let fontName = name + "-" + weight.fontWeight
-                let font = UIFont(name: fontName, size: size)
-                return font ?? .systemFont(ofSize: size)
-            } else {
-                return UIFont(name: name, size: size) ?? .systemFont(ofSize: size)
+        case let .custom(name, weight, style, size, _, _):
+            guard !weight.proxFontWeightName.isEmpty else {
+                return UIFont(name: name + style.rawValue, size: size) ?? .systemFont(ofSize: size)
             }
-        case let .font(font, _):
+            
+            let fontName = name + "-" + weight.proxFontWeightName + style.rawValue
+            let font = UIFont(name: fontName, size: size)
+            return font ?? .systemFont(ofSize: size)
+            
+        case let .font(font, _, _):
             return font
         }
     }
     
     public var lineHeight: CGFloat {
         switch self {
-        case let .custom(_, _, _, lineHeight):
+        case let .custom(_, _, _, _, lineHeight, _):
             return lineHeight
-        case let .font(_, lineHeight):
+        case let .font(_, lineHeight, _):
             return lineHeight
         }
     }
     
+    public var letterSpacing: CGFloat {
+        switch self {
+        case let .custom(_, _, _, _, _, letter):
+            return letter
+        case let .font(_, _, letter):
+            return letter
+        }
+    }
 }
 
 extension Int {
-    var fontWeight: String {
+    var fontWeightName: String {
         switch self {
         case 100: return "Thin"
         case 200: return "UltraLight"
@@ -187,5 +201,9 @@ extension Int {
         case 900: return "Black"
         default: return ""
         }
+    }
+    
+    var proxFontWeightName: String {
+        return Int((CGFloat(self) / 100).rounded() * 100).fontWeightName
     }
 }

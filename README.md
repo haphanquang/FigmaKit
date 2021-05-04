@@ -10,11 +10,11 @@ A library to make ui code synchronize with designer's works
 
 ### Colors and Fill
 
-From designer perspective
+From designing
 
 <img src="./Resources/sample1.png" width="200" >
 
-To developer's code.
+to source code
 ```swift
 topView
     .corner(.mixed(20, 50, 0, 50))
@@ -24,7 +24,7 @@ topView
 ```
 
 
-### Multiple corners' radius
+#### Multiple corners' radius
 
 <img src="./Resources/corners.png" width="200" >
 
@@ -33,7 +33,7 @@ view
     .corner(.mixed(20, 50, 0, 50))
 ```
 
-### Background
+#### Background
 
 from gradients
 
@@ -50,7 +50,7 @@ view
     .fill(.solid(0xEBEBEB))
 ```
 
-### Strokes
+#### Strokes
 
 <img src="./Resources/strokes.png" width="200" >
 
@@ -60,7 +60,7 @@ view
 ```
 
 
-### Shadows
+#### Shadows
 
 <img src="./Resources/shadows.png" width="200" >
 
@@ -74,21 +74,38 @@ Tada! Real-life result with **pixel perfection**
 <img src="./Resources/results.png" width="200" >
 
 
-## Styles
+### Styles
 
-### Simple style for label
-```swift
-sampleLabel
-    .typography(.custom(name: "Roboto", weight: 400, size: 16, lineHeight: 20.0))
+#### Typography
+
+Never missmatch designing text styling
+
+<img src="./Resources/typography1.png" width="200" >
+
+as 
+```
+let tp = Typography.custom(
+    "Roboto",
+    weight: 500,
+    style: .italic,
+    size: 13,
+    lineHeight: 15.23,
+    letter: 2)
+
+codeLabel
+    .typography(tp)
+    .alignment(.center)
 ```
 
-### Label Rich Text
+#### Rich Text
+
+Or with multiple and complex styles in one place
 
 <img src="./Resources/typos.png" width="300" >
 
 ```swift
-let normal = Typography.custom(name: "Roboto", weight: 400, size: 16)
-let bold = Typography.custom(name: "Roboto", weight: 700, size: 20)
+let normal = Typography.custom("Roboto", weight: 400, size: 16, lineHeight: 21, letter: 1)
+let bold = Typography.custom("Roboto", weight: 700, size: 20, style: .italic)
 
 let foreground = 0x000000
 let green = 0x00FF00
@@ -97,25 +114,24 @@ let grey = 0xCCCCCC
 sampleLabel
     
     // Mark default style
-    .registerDefaults(typography: normal, color: foreground)
+    .setDefault(normal, color: foreground)
     
-    .add("Lorem".normal(bold.font, color: grey))
-    .add(" ipsum dolor sit".normal(normal.font, color: green))
+    .add("Lorem", typography: bold, color: grey)
+    .add(" ipsum dolor sit", typography: normal, color: green)
     .add(" amet ")
     .add("consectetur adipiscing elit", style: .underlined)
     .add(", sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \n")
     .add("Ut enim ad minim veniam", style: .strikeThrough)
-    .add(" quis nostrud ".normal(bold.font, color: foreground, background: green))
+    .add(" quis nostrud ", typography: bold, color: foreground, background: green)
     .add("exercitation", style: .link("https://google.com"))
     .add(" ullamco laboris nisi ut aliquip ex ea commodo ")
-    .add("consequat.".normal(bold.font, color: 0xFF0000))
+    .add("consequat.", typography: bold, color: grey)
     
     // Label-wide applying should be done finally
     .alignment(.left)
-    .lineSpacing(5)
     
     // Don't forget to clean for next use
-    .unregister()
+    .cleanUp()
 ```
 
 ## Requirement

@@ -103,6 +103,7 @@ private class FigmaView: UIView {
         
         backgroundLayer.mask = backgroundMaskLayer
         backgroundColor = .clear
+        isUserInteractionEnabled = false
     }
     
     required init?(coder: NSCoder) {

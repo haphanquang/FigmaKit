@@ -45,7 +45,9 @@ public extension UILabel {
     @discardableResult
     func typography(_ typo: Typography) -> Self {
         self.font = typo.font
+        self.numberOfLines = 0
         self.lineSpacing(max((typo.lineHeight - typo.font.pointSize), 0))
+        self.letterSpacing(typo.letterSpacing)
         return self
     }
     
@@ -59,33 +61,41 @@ public extension UILabel {
     }
     
     @discardableResult
-    func add(_ string: String, style: TextStyle = .normal) -> Self {
-        let font = StyleHolder.font ?? .systemFont(ofSize: 12)
-        let color = StyleHolder.color ?? .black
+    func add(_ string: String, style: TextStyle = .normal, typography: Typography? = nil, color: ColorType? = nil, background: ColorType? = nil) -> Self {
+        let font = typography?.font ?? StyleHolder.font ?? .systemFont(ofSize: 12)
+        let color = color ?? StyleHolder.color ?? .black
+        let background = background ?? UIColor.clear
         switch style {
             case .normal:
-                return self.add(string.normal(font, color: color))
+                return self.add(string.normal(font, color: color, background: background))
             case .underlined:
-                return self.add(string.underlined(font, color: color))
+                return self.add(string.underlined(font, color: color, background: background))
             case .strikeThrough:
-                return self.add(string.strikeThrough(font, color: color))
+                return self.add(string.strikeThrough(font, color: color, background: background))
             case let .link(url):
-                return self.add(string.link(url: url, font: font, color: color))
+                return self.add(string.link(url: url, font: font, color: color, background: background))
         }
     }
     
     @discardableResult
-    func registerDefaults(typography: Typography, color: ColorType) -> Self {
+    func setDefault(_ typography: Typography, color: ColorType) -> Self {
         StyleHolder.font = typography.font
         StyleHolder.color = color.color
-        StyleHolder.attributes = [.paragraphStyle: NSMutableParagraphStyle()]
-        self.font = typography.font
-        self.numberOfLines = 0
+        
+        let style = NSMutableParagraphStyle()
+        let lineSpacing = max((typography.lineHeight - typography.font.pointSize), 0)
+        if lineSpacing > 0 {
+            style.lineSpacing = lineSpacing
+            style.lineHeightMultiple = 1.0
+        }
+        StyleHolder.attributes = [.paragraphStyle: style]
+        
+        self.typography(typography)
         return self
     }
 
     @discardableResult
-    func unregister() -> Self {
+    func cleanUp() -> Self {
         StyleHolder.font = nil
         StyleHolder.color = nil
         StyleHolder.attributes = nil
@@ -94,22 +104,23 @@ public extension UILabel {
     
     @discardableResult
     func lineSpacing(_ value: CGFloat) -> Self {
-        let attributedString: NSMutableAttributedString
-        if let text = self.attributedText, text.length > 0 {
-            attributedString = NSMutableAttributedString(attributedString: text)
-        } else {
-            guard let text = self.text else { return self }
-            attributedString = NSMutableAttributedString(string: text)
-        }
-        
+        guard let attributedString = currentAttributedString() else { return self }
         let style = (StyleHolder.attributes?[.paragraphStyle] as? NSMutableParagraphStyle) ?? NSMutableParagraphStyle()
-        style.lineSpacing = value
-        style.lineHeightMultiple = 1.0
-
         let newAttributes: [NSAttributedString.Key: Any] = [
             .paragraphStyle: style as Any
         ]
-        
+        let range = NSMakeRange(0, attributedString.length)
+        attributedString.addAttributes(newAttributes, range: range)
+        self.attributedText = attributedString
+        return self
+    }
+    
+    @discardableResult
+    func letterSpacing(_ value: CGFloat) -> Self {
+        guard let attributedString = currentAttributedString() else { return self }
+        let newAttributes: [NSAttributedString.Key: Any] = [
+            .kern: value
+        ]
         let range = NSMakeRange(0, attributedString.length)
         attributedString.addAttributes(newAttributes, range: range)
         self.attributedText = attributedString
@@ -118,25 +129,28 @@ public extension UILabel {
     
     @discardableResult
     func alignment(_ align: NSTextAlignment) -> Self {
-        let attributedString: NSMutableAttributedString
-        if let text = self.attributedText, text.length > 0 {
-            attributedString = NSMutableAttributedString(attributedString: text)
-        } else {
-            guard let text = self.text else { return self }
-            attributedString = NSMutableAttributedString(string: text)
-        }
+        guard let attributedString = currentAttributedString() else { return self }
         
         let style = (StyleHolder.attributes?[.paragraphStyle] as? NSMutableParagraphStyle) ?? NSMutableParagraphStyle()
         style.alignment = align
-        
         let newAttributes: [NSAttributedString.Key: Any] = [
             .paragraphStyle: style as Any
         ]
-        
         let range = NSMakeRange(0, attributedString.length)
         attributedString.addAttributes(newAttributes, range: range)
         self.attributedText = attributedString
         return self
+    }
+    
+    private func currentAttributedString() -> NSMutableAttributedString? {
+        let attributedString: NSMutableAttributedString
+        if let text = self.attributedText, text.length > 0 {
+            attributedString = NSMutableAttributedString(attributedString: text)
+        } else {
+            guard let text = self.text else { return nil }
+            attributedString = NSMutableAttributedString(string: text)
+        }
+        return attributedString
     }
 }
 

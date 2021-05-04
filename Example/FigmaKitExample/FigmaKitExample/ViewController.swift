@@ -30,6 +30,7 @@ import FigmaKit
 
 class ViewController: UIViewController {
     private var sampleLabel = UILabel()
+    private var codeLabel = UILabel()
     private var topView = UIView()
     private var bottomView = UIView()
     private var sampleButton = UIButton(type: .system)
@@ -42,11 +43,17 @@ class ViewController: UIViewController {
         
         applyRichText()
         applySample()
-//        view.backgroundColor = UIColor.white.alpha(70)?.color
+        
+        for family in UIFont.familyNames.sorted() {
+            let names = UIFont.fontNames(forFamilyName: family)
+            print("Family: \(family) Font names: \(names)")
+        }
     }
     
     func configViews() {
         sampleButton.setTitle("Confirm", for: .normal)
+        sampleButton.addTarget(self, action: #selector(buttonDidTap(_:)), for: .touchUpInside)
+        codeLabel.text = "9000   1234   5678   1234"
     }
 
     func applySample() {
@@ -57,34 +64,32 @@ class ViewController: UIViewController {
             .shadow(.drop(0x000000, x: 0, y: 4, b: 4, s: 0, alpha: 25))
         
         bottomView
-            .corner(.mixed(20, 50, 0, 50))
-            .fill(.linear(colors: [(0xEBEBEB, 0), (0x9EE505, 1)], alpha: 90))
-            .stroke(.outside("#FFFFFF".alpha(90), size: 5))
-            .shadow(.drop(0x000000, x: 0, y: 4, b: 4, s: 0, alpha: 25))
+            .corner(.mixed(0, 0, 5, 5))
+            .fill(.solid(0xFFFFFF, 50))
+            .stroke(.outside(0x11111, size: 1))
         
         sampleButton
             .corner(.all(12))
             .shadow(.drop(0x000000, x: 0, y: 4, b: 4, s: 0, alpha: 25))
             .padding(.init(16))
-            .tint(0xffffff)
+            .tint(0xFFFFFF)
             .fill(
                 .linear(
-                    colors: [(0x00BF00, CGFloat(0)),
-                             (0x0000BF, CGFloat(1))],
-                    start: .init(x: 0.5, y: 0.5),
-                    end: .init(x: 1, y: 1)
+                    colors: [(0x9EE505, 0),
+                             (0xFFAABB, 1)],
+                    start: .init(x: 0.5, y: 0),
+                    end: .init(x: 0.5, y: 1)
                 )
             )
-            
-            .stroke(.center("#FFFFFF", size: 5))
-            .typography(.custom(name: "Roboto", weight: 700, size: 18))
+            .stroke(.center("#FFFFFF", size: 1))
+            .typography(.custom("Roboto", weight: 900, style: .italic, size: 20, letter: 0))
         
         view.fill(.solid("#GGFFAA"))
     }
     
     func applyRichText() {
-        let normal = Typography.custom(name: "Roboto", weight: 400, size: 16)
-        let bold = Typography.custom(name: "Roboto", weight: 700, size: 20)
+        let normal = Typography.custom("Roboto", weight: 400, size: 16, lineHeight: 21, letter: 1)
+        let bold = Typography.custom("Roboto", weight: 700, style: .italic, size: 20)
         
         let foreground = 0x000000
         let green = 0x00FF00
@@ -93,25 +98,36 @@ class ViewController: UIViewController {
         sampleLabel
             
             // Mark default style
-            .registerDefaults(typography: normal, color: foreground)
+            .setDefault(normal, color: foreground)
             
-            .add("Lorem".normal(bold.font, color: grey))
-            .add(" ipsum dolor sit".normal(normal.font, color: green))
+            .add("Lorem", typography: bold, color: grey)
+            .add(" ipsum dolor sit", typography: normal, color: green)
             .add(" amet ")
             .add("consectetur adipiscing elit", style: .underlined)
             .add(", sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \n")
             .add("Ut enim ad minim veniam", style: .strikeThrough)
-            .add(" quis nostrud ".normal(bold.font, color: foreground, background: green))
+            .add(" quis nostrud ", typography: bold, color: foreground, background: green)
             .add("exercitation", style: .link("https://google.com"))
             .add(" ullamco laboris nisi ut aliquip ex ea commodo ")
-            .add("consequat.".normal(bold.font, color: 0xFF0000))
+            .add("consequat.", typography: bold, color: grey)
             
             // Label-wide applying should be done finally
             .alignment(.left)
-            .lineSpacing(5)
             
             // Don't forget to clean for next use
-            .unregister()
+            .cleanUp()
+        
+        let tp = Typography.custom(
+            "Roboto",
+            weight: 500,
+            style: .italic,
+            size: 13,
+            lineHeight: 15.23,
+            letter: 2)
+        
+        codeLabel
+            .typography(tp)
+            .alignment(.center)
     }
 
     func layoutSampleViews() {
@@ -125,6 +141,7 @@ class ViewController: UIViewController {
 
         stack.addArrangedSubview(topView)
         stack.addArrangedSubview(sampleLabel)
+        stack.addArrangedSubview(codeLabel)
         stack.addArrangedSubview(bottomView)
         stack.addArrangedSubview(sampleButton)
         
@@ -133,11 +150,15 @@ class ViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             topView.heightAnchor.constraint(equalToConstant: 100),
-            bottomView.heightAnchor.constraint(equalToConstant: 100),
+            bottomView.heightAnchor.constraint(equalToConstant: 30),
             stack.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             stack.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             stack.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
+    }
+    
+    @objc func buttonDidTap(_ sender: UIButton) {
+        print(sender)
     }
 }
 
