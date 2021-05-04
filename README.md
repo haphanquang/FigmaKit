@@ -16,7 +16,7 @@ From designing
 
 to source code
 ```swift
-topView
+view
     .corner(.mixed(20, 50, 0, 50))
     .fill(.linear(colors: [(0xEBEBEB, 0), (0x9EE505, 1)], alpha: 90))
     .stroke(.inside(0xFFFFFF, size: 5))
@@ -106,8 +106,7 @@ let foreground = 0x000000
 let green = 0x00FF00
 let grey = 0xCCCCCC
 
-sampleLabel
-    
+label
     // Mark default style
     .setDefault(normal, color: foreground)
     
