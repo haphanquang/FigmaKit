@@ -6,7 +6,6 @@ A library to make ui code synchronize with designer's works
 
 - [x] Colors, corners, shadow, strokes, fill
 - [x] Label attributed
-- [ ] SwiftUI
 
 ### Colors and Fill
 
