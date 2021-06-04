@@ -7,8 +7,7 @@ A library to make ui code synchronize with designer's works
 - [x] Colors, corners, shadow, strokes, fill
 - [x] Label attributed
 
-<img src="./Resources/design.png" width="400" >
-<img src="./Resources/simulator.png" width="400" >
+<img src="./Resources/design.png" width="300" ><img src="./Resources/simulator.png" width="300" >
 
 ### Colors and Fill
 
