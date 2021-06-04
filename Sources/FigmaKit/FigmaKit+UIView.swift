@@ -32,6 +32,7 @@ public extension UIView {
     private func getTargetView() -> FigmaView {
         if let figmaView = self.subviews
             .first(where: { $0 is FigmaView } ) {
+            sendSubviewToBack(figmaView)
             return figmaView as! FigmaView
         }
         

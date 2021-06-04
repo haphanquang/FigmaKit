@@ -89,7 +89,7 @@ class ViewController: UIViewController {
     
     func applyRichText() {
         let normal = Typography.custom("Roboto", weight: 400, size: 16, lineHeight: 21, letter: 1)
-        let bold = Typography.custom("Roboto", weight: 700, style: .italic, size: 20)
+        let bold = Typography.custom("Roboto", weight: 700, style: .normal, size: 20)
         
         let foreground = 0x000000
         let green = 0x00FF00

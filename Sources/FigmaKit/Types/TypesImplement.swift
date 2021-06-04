@@ -155,16 +155,23 @@ extension Typography {
     public var font: UIFont {
         switch self {
         case let .custom(name, weight, style, size, _, _):
-            guard !weight.proxFontWeightName.isEmpty else {
-                return UIFont(name: name + style.rawValue, size: size) ?? .systemFont(ofSize: size)
+            let fontName = name + "-" + weight.proxFontWeight.name + style.rawValue
+            let font = UIFont(name: fontName, size: size) ?? .systemFont(ofSize: size)
+            if style == .italic, let des = font.fontDescriptor.withSymbolicTraits(.traitItalic) {
+                return UIFont(descriptor: des, size: 0)
             }
-            
-            let fontName = name + "-" + weight.proxFontWeightName + style.rawValue
-            let font = UIFont(name: fontName, size: size)
-            return font ?? .systemFont(ofSize: size)
-            
+            return font
+        
+        case let .system(weight, style, size, _, _):
+            let font = UIFont.systemFont(ofSize: size, weight: weight.fontWeight)
+            if style == .italic, let des = font.fontDescriptor.withSymbolicTraits(.traitItalic) {
+                return UIFont(descriptor: des, size: 0)
+            }
+            return font
+        
         case let .font(font, _, _):
             return font
+            
         }
     }
     
@@ -173,6 +180,8 @@ extension Typography {
         case let .custom(_, _, _, _, lineHeight, _):
             return lineHeight
         case let .font(_, lineHeight, _):
+            return lineHeight
+        case let .system(_, _, _, lineHeight, _):
             return lineHeight
         }
     }
@@ -183,27 +192,51 @@ extension Typography {
             return letter
         case let .font(_, _, letter):
             return letter
+        case let .system(_, _, _, _, letter):
+            return letter
         }
     }
 }
 
 extension Int {
-    var fontWeightName: String {
+    var fontWeight: UIFont.Weight {
         switch self {
-        case 100: return "Thin"
-        case 200: return "UltraLight"
-        case 300: return "Light"
-        case 400: return "Regular"
-        case 500: return "Medium"
-        case 600: return "Semibold"
-        case 700: return "Bold"
-        case 800: return "Heavy"
-        case 900: return "Black"
-        default: return ""
+        case 100: return .thin
+        case 200: return .ultraLight
+        case 300: return .light
+        case 400: return .regular
+        case 500: return .medium
+        case 600: return .semibold
+        case 700: return .bold
+        case 800: return .heavy
+        case 900: return .black
+        default: return .regular
         }
     }
     
-    var proxFontWeightName: String {
-        return Int((CGFloat(self) / 100).rounded() * 100).fontWeightName
+    var proxFontWeight: UIFont.Weight {
+        return prox.fontWeight
+    }
+    
+    private var prox: Int {
+        return Int((CGFloat(self) / 100).rounded() * 100)
+    }
+}
+
+extension UIFont.Weight {
+    var name: String {
+        switch self {
+        case .thin: return "Thin"
+        case .ultraLight: return "UltraLight"
+        case .light: return "Light"
+        case .regular: return "Regular"
+        case .medium: return "Medium"
+        case .semibold: return "Semibold"
+        case .bold: return "Bold"
+        case .heavy: return "Heavy"
+        case .black: return "Black"
+        default:
+            return "Regular"
+        }
     }
 }

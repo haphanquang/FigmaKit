@@ -50,6 +50,16 @@ public extension UILabel {
         self.letterSpacing(typo.letterSpacing)
         return self
     }
+    @discardableResult
+    func content(_ string: String) -> Self {
+        self.text = string
+        return self
+    }
+    @discardableResult
+    func color(_ color: ColorType) -> Self {
+        self.textColor = color.color
+        return self
+    }
     
     @discardableResult
     func add(_ string: NSAttributedString) -> Self {
@@ -57,6 +67,7 @@ public extension UILabel {
         let new = NSMutableAttributedString(attributedString: recent)
         new.append(string)
         self.attributedText = new
+        self.invalidateIntrinsicContentSize()
         return self
     }
     

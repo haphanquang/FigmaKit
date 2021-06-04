@@ -74,5 +74,6 @@ public enum Fill: FillType {
 }
 public enum Typography: TypographyType {
     case custom(String, weight: Int, style: FontStyle = .normal, size: CGFloat, lineHeight: CGFloat = 0, letter: CGFloat = 0.0)
+    case system(weight: Int, style: FontStyle = .normal, size: CGFloat, lineHeight: CGFloat = 0, letter: CGFloat = 0.0 )
     case font(UIFont, lineHeight: CGFloat = 0, letter: CGFloat = 0.0)
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB3C65AB266A026500CED941 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C65AA266A026500CED941 /* RegisterViewController.swift */; };
+		EB3C65AD266A040D00CED941 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C65AC266A040D00CED941 /* Extensions.swift */; };
 		EB522C7E2634577B006C3C05 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB522C6C2634577B006C3C05 /* Roboto-Medium.ttf */; };
 		EB522C7F2634577B006C3C05 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB522C6D2634577B006C3C05 /* Roboto-Light.ttf */; };
 		EB522C822634577B006C3C05 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB522C702634577B006C3C05 /* Roboto-Regular.ttf */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB3C65AA266A026500CED941 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		EB3C65AC266A040D00CED941 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EB522C6C2634577B006C3C05 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		EB522C6D2634577B006C3C05 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		EB522C702634577B006C3C05 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 				EB522C6B2634577B006C3C05 /* Resources */,
 				EBAC06642633E9E0004455BC /* AppDelegate.swift */,
 				EBAC06662633E9E0004455BC /* SceneDelegate.swift */,
+				EB3C65AA266A026500CED941 /* RegisterViewController.swift */,
+				EB3C65AC266A040D00CED941 /* Extensions.swift */,
 				EBAC06682633E9E0004455BC /* ViewController.swift */,
 				EBAC066A2633E9E0004455BC /* Main.storyboard */,
 				EBAC066D2633E9E1004455BC /* Assets.xcassets */,
@@ -329,9 +335,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB3C65AD266A040D00CED941 /* Extensions.swift in Sources */,
 				EBAC06692633E9E0004455BC /* ViewController.swift in Sources */,
 				EBAC06652633E9E0004455BC /* AppDelegate.swift in Sources */,
 				EBAC06672633E9E0004455BC /* SceneDelegate.swift in Sources */,
+				EB3C65AB266A026500CED941 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
