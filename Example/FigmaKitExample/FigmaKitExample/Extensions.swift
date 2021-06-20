@@ -29,7 +29,7 @@ For more information, please refer to <http://unlicense.org/>
 import Foundation
 import UIKit
 
-extension UIStackView {
+public extension UIStackView {
     static func vStack(spacing space: CGFloat = .zero) -> UIStackView {
         let stack = UIStackView()
         stack.axis = .vertical
@@ -48,12 +48,20 @@ extension UIStackView {
     }
 }
 
-extension UIView {
-    static func hLine() -> UIView {
+public extension UIView {
+    static func hLine(_ width: CGFloat = 0.5) -> UIView {
         let view = UIView()
         view.backgroundColor = UIColor.lightGray
         NSLayoutConstraint.activate([
-            view.heightAnchor.constraint(equalToConstant: 0.5)
+            view.heightAnchor.constraint(equalToConstant: width)
+        ])
+        return view
+    }
+    static func vLine(_ width: CGFloat = 0.5) -> UIView {
+        let view = UIView()
+        view.backgroundColor = UIColor.lightGray
+        NSLayoutConstraint.activate([
+            view.widthAnchor.constraint(equalToConstant: width)
         ])
         return view
     }

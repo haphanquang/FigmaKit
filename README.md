@@ -1,6 +1,6 @@
 # FigmaKit
 
-A library to make ui code synchronize with designer's works
+Pixel Perfect with ease
 
 ## Features
 
