@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:Tools"
+      name = "Tools">
+      <FileRef
+         location = "group:build.sh">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Example/FigmaKitExample/FigmaKitExample.xcodeproj">
+   </FileRef>
+</Workspace>

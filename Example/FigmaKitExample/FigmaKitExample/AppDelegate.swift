@@ -30,10 +30,9 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        logFontsNames()
         return true
     }
 
@@ -52,5 +51,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    private func logFontsNames() {
+        for family in UIFont.familyNames.sorted() {
+            let names = UIFont.fontNames(forFamilyName: family)
+            print("Family: \(family) Font names: \(names)")
+        }
+    }
 }
 

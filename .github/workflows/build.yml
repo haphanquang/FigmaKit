@@ -1,0 +1,17 @@
+name: Build
+
+on: 
+  push: 
+    branches: [ $default-branch ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout
+      - name: Build
+        run: swift build
+      - name: Run tests
+        run: swift test

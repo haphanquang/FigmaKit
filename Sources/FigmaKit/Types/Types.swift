@@ -72,8 +72,3 @@ public enum Fill: FillType {
     case solid(ColorType?, _ alpha: CGFloat = 100)
     case linear(colors: [(ColorType?, CGFloat?)], start: CGPoint? = nil, end: CGPoint? = nil, alpha: CGFloat = 100)
 }
-public enum Typography: TypographyType {
-    case custom(String, weight: Int, style: FontStyle = .normal, size: CGFloat, lineHeight: CGFloat = 0, letter: CGFloat = 0.0)
-    case system(weight: Int, style: FontStyle = .normal, size: CGFloat, lineHeight: CGFloat = 0, letter: CGFloat = 0.0 )
-    case font(UIFont, lineHeight: CGFloat = 0, letter: CGFloat = 0.0)
-}

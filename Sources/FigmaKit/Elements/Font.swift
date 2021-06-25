@@ -27,3 +27,46 @@ For more information, please refer to <http://unlicense.org/>
 
 import Foundation
 import UIKit
+
+extension Int {
+    var fontWeight: UIFont.Weight {
+        switch self {
+        case 100: return .thin
+        case 200: return .ultraLight
+        case 300: return .light
+        case 400: return .regular
+        case 500: return .medium
+        case 600: return .semibold
+        case 700: return .bold
+        case 800: return .heavy
+        case 900: return .black
+        default: return .regular
+        }
+    }
+    
+    var proxFontWeight: UIFont.Weight {
+        return prox.fontWeight
+    }
+    
+    private var prox: Int {
+        return Int((CGFloat(self) / 100).rounded() * 100)
+    }
+}
+
+extension UIFont.Weight {
+    var name: String {
+        switch self {
+        case .thin: return "Thin"
+        case .ultraLight: return "UltraLight"
+        case .light: return "Light"
+        case .regular: return "Regular"
+        case .medium: return "Medium"
+        case .semibold: return "Semibold"
+        case .bold: return "Bold"
+        case .heavy: return "Heavy"
+        case .black: return "Black"
+        default:
+            return "Regular"
+        }
+    }
+}

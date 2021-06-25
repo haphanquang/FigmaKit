@@ -54,17 +54,23 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configViews()
         setupLayout()
         setupTextFields()
         setupLabels()
         setupButtons()
-        
+    }
+    
+    private func configViews() {
+        view.backgroundColor = .white
         imgBackground.image = UIImage(named: "register_bg")
+        scrollView.showsVerticalScrollIndicator = false
     }
     
     private func setupLayout() {
         view.addAutoHeightSubview(imgBackground)
         view.addFilledSubview(mainStack)
+        
         mainStack.layoutMargins = .init(20)
         mainStack.isLayoutMarginsRelativeArrangement = true
         
@@ -176,6 +182,13 @@ class RegisterViewController: UIViewController {
         
         btnGetStarted.setTitle("GET STARTED", for: .normal)
         btnTick.setImage(UIImage(named: "ic_square"), for: .normal)
+        
+        btnBack.addTarget(self, action: #selector(pop), for: .touchUpInside)
+    }
+    
+    @objc
+    private func pop() {
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
