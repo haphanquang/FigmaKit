@@ -13,7 +13,7 @@ Pixel Perfect with ease
 
 From designing
 
-<img src="./Resources/sample1.png" width="200" >
+<img src="./Resources/figma_design.png" width="200" >
 
 to source code
 ```swift
@@ -69,7 +69,7 @@ topView
 
 Tada! Real-life result with **pixel perfection**
 
-<img src="./Resources/results.png" width="200" >
+<img src="./Resources/sample1.png" width="200" >
 
 
 ### Styles

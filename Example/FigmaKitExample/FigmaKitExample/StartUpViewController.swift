@@ -43,7 +43,7 @@ class StartUpViewController: UIViewController {
     }
     
     func configViews() {
-        sampleButton.setTitle("LOGIN", for: .normal)
+        sampleButton.setTitle("Register 👈🏻", for: .normal)
         sampleButton.addTarget(self, action: #selector(buttonDidTap(_:)), for: .touchUpInside)
         codeLabel.text = "9000   1234   5678   1234"
         

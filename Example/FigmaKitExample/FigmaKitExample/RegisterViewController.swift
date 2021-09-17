@@ -50,6 +50,8 @@ class RegisterViewController: UIViewController {
     private let inputStack = UIStackView.vStack(spacing: 20)
     private let policyStack = UIStackView.hStack()
     
+    private var ticked: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configViews()
@@ -59,10 +61,21 @@ class RegisterViewController: UIViewController {
         setupButtons()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        registerNotifications()
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        scrollView.contentInset.bottom = 0
+    }
+    
     private func configViews() {
         view.backgroundColor = .white
         imgBackground.image = UIImage(named: "register_bg")
         scrollView.showsVerticalScrollIndicator = false
+        scrollView.keyboardDismissMode = .interactive
     }
     
     private func setupLayout() {
@@ -188,13 +201,53 @@ class RegisterViewController: UIViewController {
         
         btnGetStarted.setTitle("GET STARTED", for: .normal)
         btnTick.setImage(UIImage(named: "ic_square"), for: .normal)
-        
+        btnTick.addTarget(self, action: #selector(tickMe), for: .touchUpInside)
         btnBack.addTarget(self, action: #selector(pop), for: .touchUpInside)
     }
     
     @objc
     private func pop() {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc
+    private func tickMe() {
+        ticked.toggle()
+        if ticked {
+            btnTick.setImage(UIImage(named: "ic_ticked"), for: .normal)
+        } else {
+            btnTick.setImage(UIImage(named: "ic_square"), for: .normal)
+        }
+    }
+    
+    private func registerNotifications() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillShow),
+            name: UIResponder.keyboardWillShowNotification, object: nil
+        )
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillHide),
+            name: UIResponder.keyboardWillHideNotification, object: nil
+        )
+    }
+
+    @objc
+    private func keyboardWillShow(notification: NSNotification) {
+        guard
+            let keyboardFrame = notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as? NSValue
+        else { return }
+        let adjustedHeight = contentStack
+            .convert(keyboardFrame.cgRectValue, from: nil)
+            .size
+            .height - btnGetStarted.frame.height - mainStack.spacing
+        scrollView.contentInset.bottom = adjustedHeight
+    }
+
+    @objc
+    private func keyboardWillHide(notification: NSNotification) {
+        scrollView.contentInset.bottom = 0
     }
 }
 
