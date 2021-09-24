@@ -1,6 +1,7 @@
 #!/bin/bash -e -u -o pipefail
 
 # Call with <sdk> <scheme> <…other args>
+# Invalid comments
 SDK="$1"
 SCHEME="$2"
 shift 2
